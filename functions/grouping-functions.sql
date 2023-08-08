@@ -1,0 +1,1 @@
+select min(salary), max(salary), sum(salary), avg(salary), round(avg(salary)), count(salary) from employees;
