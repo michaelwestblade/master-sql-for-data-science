@@ -14,3 +14,5 @@ from employees where department in (select department from departments where div
 
 select *
 from employees where region_id in (select regions.region_id from regions where country in ('Asia', 'Canada')) and salary > 130000;
+
+select first_name, department, salary, (select max(salary) from employees), (select max(salary) from employees) - employees.salary as diff from employees;
