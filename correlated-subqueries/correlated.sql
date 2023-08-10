@@ -21,3 +21,5 @@ order by department, salary desc ;
 select department from departments d where 38 < (select count(*) from employees e where e.department = d.department);
 
 select department, (select max(salary) from employees where department = d.department) from departments d where 38 < (select count(*) from employees e where e.department = d.department);
+
+select department, (select max(salary) from employees where department = d.department) from departments d;
